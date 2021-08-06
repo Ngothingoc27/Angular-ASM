@@ -1,0 +1,68 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <img src="http://wordpress.templatemela.com/woo/WCM05/WCM050119/wp-content/uploads/2019/08/logo.png" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/product" class="text-white px-16">
+              Product
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/admin/product" class="text-white px-16 mt-3">
+              Admin
+            </a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="row mx-16">
+  <div class="col-3 mt-16 bg-light">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-dark bg-light" style="width: 280px;">
+      <ul class="">
+        <li class="nav-item">
+          <a href="#" class="mx-7">
+            PRODUCT
+          </a>
+          <hr class="text-xl">
+        </li>
+        <li>
+          <a routerLink="/product" class="nav-link">
+            Product
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">
+            Category
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-8">
+    <h1 class="text-center text-xl">Product</h1>
+      <div class="grid grid-cols-4 gap-24">
+        <div class="shadow-xl my-4" style="width: 15rem;" *ngFor="let product of products">
+            <img src="{{product.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text">{{product.price}}</p>
+            <a href="#" class="btn btn-primary">Detail</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

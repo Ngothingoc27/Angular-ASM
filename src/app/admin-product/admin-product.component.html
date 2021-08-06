@@ -1,0 +1,68 @@
+<a class="nav-link active px-16" aria-current="page" href="#">Home</a>
+<div class="row">
+  <div class="col-3">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link active"  routerLink="/product/add">
+            <svg class="bi me-2" width="16" height="16"></svg>
+            Add product
+          </a>
+        </li>
+        <li>
+          <a routerLink="/admin/product"  class="nav-link text-white">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+            Product
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-white">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+            Category
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-white">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+            User
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-white">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+            Customers
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Product name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Image</th>
+          <th scope="col">Description</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <th scope="row"></th>
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td><img src="{{product.image}}" class="w-16" alt="..."></td>
+          <td>{{product.description}}</td>
+          <td><button type="button" class="btn btn-danger" (click)="onHandleRemove(product.id)">Delete</button>
+            <button routerLink="/product/{{product.id}}/edit" class="btn btn-primary btn-sm">
+              Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

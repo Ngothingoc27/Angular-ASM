@@ -1,0 +1,76 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <img src="http://wordpress.templatemela.com/woo/WCM05/WCM050119/wp-content/uploads/2019/08/logo.png" alt="" class="px-16">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active px-16" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/product" class=" nav-link active text-white px-16">
+                Product
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/admin/product" class="nav-link active text-white px-16">
+                Admin
+              </a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+<div class="">
+    <img src="https://ambient.qodeinteractive.com/wp-content/uploads/2017/02/main-home-slider-image.jpg">
+</div>
+<div class="row mb-2 mx-32 my-16">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">World</strong>
+          <h3 class="mb-0">Featured post</h3>
+          <div class="mb-1 text-muted">Nov 12</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="http://wordpress.templatemela.com/woo/WCM06/WCM060143/WP3/wp-content/uploads/2021/05/6.jpg" class="w-60" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Design</strong>
+          <h3 class="mb-0">Post title</h3>
+          <div class="mb-1 text-muted">Nov 11</div>
+          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+            <img src="http://wordpress.templatemela.com/woo/WCM06/WCM060143/WP3/wp-content/uploads/2021/05/4.jpg" class="w-60" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1 class="text-center text-xl my-5">Product</h1>
+  <div class="grid grid-cols-4 mx-32">
+    <div class="shadow-xl" style="width: 18rem;" *ngFor="let product of products">
+        <img src="{{product.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        <p class="card-text">{{product.price}}</p>
+        <a href="#" class="btn btn-primary">Detail</a>
+      </div>
+    </div>
+  </div>
+  

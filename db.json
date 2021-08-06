@@ -1,0 +1,32 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Product test",
+      "price": 100,
+      "image": "http://wordpress.templatemela.com/woo/WCM06/WCM060143/WP3/wp-content/uploads/2021/05/16-248x300.jpg",
+      "description": "ok"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 100,
+      "image": "http://wordpress.templatemela.com/woo/WCM06/WCM060143/WP3/wp-content/uploads/2021/05/17-248x300.jpg",
+      "description": "ok"
+    },
+    {
+      "id": 3,
+      "name": "javasrip",
+      "price": "0123",
+      "image": "http://wordpress.templatemela.com/woo/WCM06/WCM060143/WP3/wp-content/uploads/2021/05/11-248x300.jpg",
+      "description": "kk"
+    },
+    {
+      "id": 4,
+      "name": "ngocntph",
+      "price": "123",
+      "image": "http://wordpress.templatemela.com/woo/WCM06/WCM060143/WP3/wp-content/uploads/2021/05/5-248x300.jpg",
+      "description": "12345"
+    }
+  ]
+}
